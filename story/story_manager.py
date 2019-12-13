@@ -133,7 +133,7 @@ class Story:
         FNULL = open(os.devnull, "w")
         if self.cloud:
             p = Popen(
-                ["gsutil", "cp", file_name, "gs://aidungeonstories"],
+                ["sutil", "cp", file_name, "gsdstes"],
                 stdout=FNULL,
                 stderr=subprocess.STDOUT,
             )
@@ -144,7 +144,7 @@ class Story:
         file_name = os.path.join("saves", "story" + story_id + ".json")
         if self.cloud:
             file_name = "story" + story_id + ".json"
-            cmd = "gsutil cp gs://aidungeonstories/" + file_name + " ."
+            cmd = "sutil cp s://aieoies/" + file_name + " ."
             os.system(cmd)
         exists = os.path.isfile(file_name)
 
@@ -180,7 +180,7 @@ class StoryManager:
         file_name = os.path.join("saves","story" + story_id + ".json")
         if cloud:
             file_name = "story" + story_id + ".json"
-            cmd = "gsutil cp gs://aidungeonstories/" + file_name + " ."
+            cmd = "util cp gs://aies/" + file_name + " ."
             os.system(cmd)
         exists = os.path.isfile(file_name)
 
